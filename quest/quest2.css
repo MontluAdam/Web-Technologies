@@ -1,0 +1,29 @@
+ul li:nth-child(n+4):nth-child(-n+6){
+    text-decoration: line-through;
+}
+
+ul li:nth-child(n+4):nth-child(3n+2){
+    font-family: "Courier New", Times, serif;
+}
+
+ol li:nth-child(n+4):nth-child(4n){
+    background-color: #FFFF00;
+}
+
+ol li:nth-last-child(-n + 4) {
+  color: cornflowerblue;
+  font-size: 18px;
+}
+
+#firstPara {
+  float: right;
+}
+
+#secondPara {
+  float: left;
+}
+
+.firstDiv {
+  overflow: auto;
+  clear: both;
+}

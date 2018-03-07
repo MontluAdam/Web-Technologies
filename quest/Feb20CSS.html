@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+	<head>
+		<meta charset="UTF-8">
+		<title> Feb 20 Class Notes </title>
+		<style>
+		
+			p:first-child{
+				background-color: red;
+			}
+			#fpar{
+				float: left;
+				width: 100px;
+				height: 200px;
+			}
+			#poorPar{
+				position: absolute;
+				top: 1500px;
+				left: -50px;
+				
+			}
+			#sp{
+				position: relative;
+				top: 20px;
+				left: 20px;
+				border: 1px solid black;
+	
+				visibility: hidden;
+			}
+			#fixPos{
+				position: fixed;
+				top: 30px;
+				width: 50px;
+				border: 5px solid black;
+				background-color: blue;
+			}
+			#img1{
+				position: absolute;
+				top: 600px;
+				left: 400px;
+			
+			}
+			#img2{
+				position: absolute;
+				top: 650px;
+				left: 500px;
+			}
+			a[href]{
+				text-decoration: none;
+			}
+			a:hover{
+				color: red;
+			}
+			a:active{
+				color: green;
+			}
+			p:first-of-type{
+				color: red;
+			}
+			p:last-child{
+				border: 10px;
+			}
+			p:last-of-type{
+				color: blue;
+			}
+			p:only-child{
+
+			}
+			li:nth-child(2n+1){ /* odd */
+				background-color: gray;	
+			}
+			li:nth-child(2n){ /*even*/
+				background-color: yellow;	
+			}
+			li:nth-child(4n+1)
+			{
+				background-color: black;	
+			}
+			li:nth-child(-n+4){
+				background-color: red;	
+			}
+			li:nth-child(){
+				background-color: blue;	
+			}
+		</style>
+		<script>
+			/*window.addEventListener("load",
+				function(){
+					var imgs = document.getElementsByTagName("img");
+					for(var i = 0; i < imgs.length; i++){
+						console.log(imgs[i].nodeName);
+						var style = getComputedStyle(imgs[i]);
+						console.log('zindex: '+ style.zIndex);
+					}
+				});*/
+		</script>
+	</head>
+	<body>
+		<h1> Feb 18 Class Notes </h1>
+		<div>
+			<h2> Facts about Istanbul </h2>
+			<p id="fpar"> Istanbul is a big city. </p>
+			<p id="down"> Istanbul has <span id="sp">20 million</span> people living in it.</p>
+		</div>
+		<p id="poorPar"> Poor paragraph; outside of all div's. </p>
+		<div>
+			<h2 id="fixPos"> Pictures of Istanbul </h2>
+			<p> Karakoy port <img src="karakoy.jpeg" alt="karakoy"></p>
+			<p> You can <a href="https://www.google.com" >
+				google </a> for these places. </p>
+			<p> Beykoz <img src="beykoz.jpeg" alt="beykoz"></p>
+			<img id="img1" src="karakoy.jpeg" alt="karakoy">
+			<img id="img2" src="beykoz.jpeg" alt="beykoz">
+			
+		</div>
+		<ul>
+			<li> list item 1 </li>
+			<li> list item 2 </li>
+			<li> list item 3 </li>
+			<li> list item 4 </li>
+			<li> list item 5 </li>
+			<li> list item 6 </li>
+		</ul>
+		
+	</body>
+</html>

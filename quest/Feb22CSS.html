@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+	<head>
+		<meta charset="UTF-8">
+		<title> Feb 20 Class Notes </title>
+		<style>
+			/*
+			p:first-child{
+				background-color: red;
+			}*/
+			h1{
+				margin: 0px;
+				padding: 0px;
+				position: fixed;
+				top: 0px;
+				left: 0px;
+				border: 1px solid black;
+				text-align: center;
+				background-color: #eee;
+			}
+			#fpar{
+				float: left;
+				width: 100px;
+				height: 100px;
+				background-color:#eee;
+			}
+			#down {
+					clear: left;
+				}
+			#poorPar{
+				position: absolute;
+				top: 1500px;
+				left: -50px;
+				
+			}
+			li:nth-child(n-3){
+
+			}
+			li:nth-child(-n+3){
+
+			}
+			li:nth-child(4n+1){
+
+			}
+			li:nth-child(n+10){
+
+			}
+			li:nth-child(1){
+				background-color: red;
+			}
+			li:nth-child(2n+1){ /*odd*/
+				background-color: gray;
+			}
+			li:nth-child(even){/*2n*/
+				background-color: #eee;
+			}
+			[id]{
+				color: red;
+			}
+			a:active{
+				color: red;
+			}
+			p:first-child{
+				border: 5px;
+			}
+			p:first-of-type{
+				border: 5px;
+			}
+			/*img{
+				visibility: hidden;
+			}*/
+			#sp{
+				position: relative;
+				top: 20px;
+				left: 20px;
+				border: 1px solid black;
+				background-color: black;	
+				/*visibility: hidden;*/
+			}
+			#fixPos{
+				position: fixed;
+				top: 30px;
+				left: 100px;
+				width: 50px;
+				border: 5px solid black;
+				background-color: rgb(126, 126, 196);
+			}/*
+			#img1{
+				position: absolute;
+				top: 600px;
+				left: 400px;
+			
+			}
+			#img2{
+				position: absolute;
+				top: 650px;
+				left: 500px;
+			}*/
+			a[href^="https:"]{
+				text-decoration: none;
+			}
+			[data-quantity]{
+				font-size: 36pt;
+			}
+			li:hover{
+				border: 5px solid black;;
+			}
+			/*
+			a:hover{
+				color: red;
+			}
+			a:active{
+				color: green;
+			}
+			p:first-of-type{
+				color: red;
+			}
+			p:last-child{
+				border: 10px;
+			}
+			p:last-of-type{
+				color: blue;
+			}
+			p:only-child{
+
+			}
+			li:nth-child(2n+1){
+				background-color: gray;	
+			}
+			li:nth-child(2n){
+				background-color: yellow;	
+			}
+			li:nth-child(4n+1)
+			{
+				background-color: black;	
+			}
+			li:nth-child(-n+4){
+				background-color: red;	
+			}
+			li:nth-child(){
+				background-color: blue;	
+			}*/
+		</style>
+		<script>
+			/*window.addEventListener("load",
+				function(){
+					var imgs = document.getElementsByTagName("img");
+					for(var i = 0; i < imgs.length; i++){
+						console.log(imgs[i].nodeName);
+						var style = getComputedStyle(imgs[i]);
+						console.log('zindex: '+ style.zIndex);
+					}
+				});*/
+		</script>
+	</head>
+	<body>
+		<h1> Feb 22 Class Notes </h1>
+		<div>
+			<h2 id="fh2"> Facts about Istanbul </h2>
+			<p id="fpar"> Istanbul is a big city. </p>
+			<p id="down"> Istanbul has <span id="sp">20 million</span> people living in it.</p>
+		</div>
+		<p id="poorPar" data-quantity> Poor paragraph; outside of all div's. </p>
+		<div>
+			<h2 id="fixPos"> Pictures of Istanbul </h2>
+			<p> Karakoy port <img src="karakoy.jpeg" alt="karakoy"></p>
+			<p> You can <a href="https://www.google.com" >
+				google </a> for these places. </p>
+			<p> Beykoz <img src="beykoz.jpeg" alt="beykoz"></p>
+			<img id="img1" src="karakoy.jpeg" alt="karakoy">
+			<a href="https://amazon.com" ><img id="img2" src="beykoz.jpeg" alt="beykoz"></a>
+			
+		</div>
+		<ul>
+			<li> list item 1 </li>
+			<li> list item 2 </li>
+			<li> list item 3 </li>
+			<li> list item 4 </li>
+			<li> list item 5 </li>
+			<li> list item 6 </li>
+		</ul>
+		
+	</body>
+</html>
