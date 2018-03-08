@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="UTF-8">
+        <title> JavaScript Feb./Mar. 27/1</title>
+        	<script>
+				/* loosely-typed language as opposed to
+				 	strongly-typed language.
+				*/
+				/*
+					variable i does not have any type but
+					contents of i has type, that is, variables
+					do not have type but data have.
+				*/
+				/*function pow(a, b){
+					var res = 1;
+					for(var i = 0; i < b; i++)
+						res *= a;
+					return res;
+					//return undefined;
+				}
+				//because of hoisting
+				*/
+				/*
+					function foo(){
+						function bar(){
+							var j;
+							j = 12;
+							return i + j;
+						}
+						function baz(){
+							var k;
+							k = 1;
+							return i + k;
+						}
+				   	var i;
+						i = 34;
+					console.log(j);
+					
+					//console.log(bar() + baz()+i);
+					return baz; //return baz();
+				}
+
+				*/
+				var i;
+				window.console.log(typeof(i));
+				i = 5;
+				console.log(typeof(window.i));
+				i = "hello";
+				console.log(typeof(i));
+				i = true;
+				console.log(typeof(i));
+				i = function(){}
+				console.log(typeof(i));
+				i = Object(); /* {}; */
+				console.log(typeof(i));
+
+				for(var j = 0; j < 5; j++)
+					console.log(j);
+
+				var ar = [];
+				var ar2 = new Array();
+				var ar3 = ["hello", 4, [1,2.5]];
+				console.log("ar length: " + ar3.length);
+			
+				//hoisting: raise (something) by means of 				// ropes and pulleys.
+				//All function and variable declarations
+				//are hoisted (placed at the top of its
+				//scope)
+				console.log("pow: " + pow(2,5));
+				
+				//in Javascript every function has to return
+				//a value, that is, all functions are value-
+				//returning functions.
+				function pow(a, b){
+					var res = 1;
+					for(var i = 0; i < b; i++)
+						res *= a;
+					return res;
+					//return undefined;
+				}
+
+				var nums = [23, 23.1, 56, 'hello'];
+				
+				//all object properties are public!!!!
+				var b = "brand";
+				var car = {brand: "toyota", year: 2004,
+					1: "one"};
+				car.brand = 3 * 34;
+				car.ownerName = "Omer Sahinler";
+
+				/*
+					class Car{
+						public String brand;
+						public int year;
+						public String one;
+						Car(String b, int y, String o){
+							this.brand = b;
+							this.year = y;
+							this.one = o;
+						}
+						public void main(String [] args){
+							Car car = new Car("toyota", 2004, "one");
+					}
+	
+				*/
+				//(1) objects can be though of as associative arrays
+				//where indices could be any type (not just integral
+				//types as with regular arrays)
+				//(2) objects' properties could be accessed using the 
+				//. (dot) notation as we are familiar with or using
+				//the array ([]) notation which is more powerful
+				//than the . (dot) notation as could be seen below.
+				console.log(car[2-1]);
+				console.log(car["1"]);
+				//console.log(car.1); //does not work
+				console.log(car.brand);
+				console.log(car[b]); //car.brand
+				console.log(car["year"]);	//car.year
+				console.log(car);
+				//every object has an internal property (unless you
+				//discard it) called __proto__ which "links" the 
+				//object to its "parent" object. Once a property
+				//accessed in an object cannot be found in the "own"
+				//properties of the object, this link is followed
+				//and the parent object is checked for the property,
+				//and so on until the search ends with a success or
+				//failure at the Object object.
+				console.log(car.toString());
+
+
+				//scoping
+				//lexical scoping
+				//(1) Every function declaration creates a scope (box)
+				//(2) Functions are first-class citizens, that is, you can
+				//use functions (function objects) anywhere in your code
+				//where you can use variables. That is, functions can be 
+				//assigned to variables, passed to functions, and returned
+				//from functions.
+				function foo(){
+				   var i = 34;
+					console.log(j);
+					function bar(){
+						var j = 12;
+						return i + j;
+					}
+					function baz(){
+						var k = 1;
+						return i + k;
+					}
+					//console.log(bar() + baz()+i);
+					return baz; //return baz();
+				}
+				baz();
+				var k = 5;
+				k = function (){ return 5;};
+				k();
+				//foo()();
+				var bbb = foo();
+				console.log(bbb());
+				
+				var foo2 = foo;
+				foo2();
+				var foo3 = foo();
+
+
+				var foo4 = function another(){
+					//some function body
+				}
+
+				var foo5 = function(){
+					//some function body
+				}
+				//funtion foo5(){ //same body as above }
+
+				foo5();
+
+
+				foo6(function(){return 5;});
+
+				function foo6 (f){
+					return f();
+				}
+
+				
+
+
+
+				
+
+			</script>
+    </head>
+    <body>
+        
+    </body>
+
+</html>

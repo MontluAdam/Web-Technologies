@@ -16,14 +16,18 @@ ol li:nth-last-child(-n + 4) {
 }
 
 #firstPara {
-  float: right;
+  text-align: right;
 }
 
 #secondPara {
-  float: left;
+  text-align: left;
 }
 
 .firstDiv {
   overflow: auto;
   clear: both;
+}
+
+div > p:first-child {
+  background-color: 
 }

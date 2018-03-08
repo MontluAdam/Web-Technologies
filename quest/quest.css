@@ -22,6 +22,12 @@ header {
   background-color: gray;
 }
 
+#thirdDiv {
+border: 1px solid black;
+  text-align: center;
+  background-color: gray;  
+}
+
 
 p.secondDiv {
   margin: 10px;
@@ -57,14 +63,10 @@ button {
 
 ul {
   list-style-type: none;
-  border: 2px solid black;
   margin: 10px;
   padding: 10px;
 }
 
-.clearfix {
-    overflow: auto;
-}
 
 .img1 {
   float: left;
@@ -79,4 +81,10 @@ li {
   display: inline-block;
   margin: 10px;
   border: 2px solid gray;
+}
+
+#main > li { 
+  float: left;
+  width: 150px;
+  border: 1px solid black;
 }
