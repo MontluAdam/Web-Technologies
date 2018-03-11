@@ -31,3 +31,48 @@ ol li:nth-last-child(-n + 4) {
 div > p:first-child {
   background-color: 
 }
+
+table, td, th {
+    border: 1px solid black;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+td {
+  padding: 20px;
+}
+th {
+    text-align: left;
+}
+
+tr:nth-child(odd) {
+  background: #CCC
+}
+.tab tr:nth-last-child(-n+3) {
+  background: green;
+}
+
+td:empty {
+    background: #ff0000;
+}
+
+p:not(.announcements) {
+  font-weight: bold;
+}
+
+img:nth-child(2):hover { 
+  border: 2px solid green;
+}
+
+a:visited:not(link) {
+  color: green;
+}
+a:link {
+  color: red;
+}
+
+a[href*='//']{
+  color: purple;
+}
