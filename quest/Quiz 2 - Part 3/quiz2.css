@@ -1,0 +1,17 @@
+ul {
+  text-align: center;
+  padding-top: 100px;
+}
+li {  
+  padding: 3px;
+  list-style-type: none;
+  border: 1px solid black;
+  display: inline;
+}
+
+img { 
+  position: absolute;
+  top: 30%;
+  left: 43%;
+  border: 1px solid black;
+}
