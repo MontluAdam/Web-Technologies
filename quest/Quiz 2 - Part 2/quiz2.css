@@ -10,3 +10,12 @@ td {
   width: 100px;
   height: 100px;
 }
+
+img {
+  margin: auto;
+  opacity: 0;
+}
+
+img:hover {
+  opacity: 1;
+}
