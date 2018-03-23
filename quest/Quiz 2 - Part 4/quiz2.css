@@ -1,0 +1,34 @@
+h3 {
+  text-align: center;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid black;
+  width: 150px;
+  height: 150px;
+  top: 10%;
+  left: 45%;
+  position: absolute;
+}
+span {
+  position: absolute;
+  top: 5%;
+  left: 45%;
+}
+#left {
+  margin-left: 5.5%;
+  padding-left: 80px;
+  padding-top: 250px;
+  z-index: 500;
+  /*background: red;*/
+}
+
+#right {
+  padding-right: 80px;
+  padding-top: 250px;
+  z-index: 500;
+  /*background: green;*/
+}
