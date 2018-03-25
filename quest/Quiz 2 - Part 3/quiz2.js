@@ -22,9 +22,11 @@ window.addEventListener("load", function(event) {
     });
     
   }
+  
   for (var i = 0; i < lis.length; i++) {
     lis[i].addEventListener("mouseout", function() {
       this.style.backgroundColor = "white";
+      img.src = "";
     });
   }
 });

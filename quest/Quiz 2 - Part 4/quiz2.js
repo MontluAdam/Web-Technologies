@@ -1,16 +1,19 @@
 var imgAr = ["house1.png", "house2.png", "house3.png", "house4.png", "house5.png", "house6.png", "house7.png", "house8.png", "house9.png"];
-var m = 2;
+var m = 1;
 var pp = 20;
 
 window.addEventListener("load", function(event) {
   for (var i = 1; i < imgAr.length+1; i++) {
     var img = document.createElement("img");
     img.setAttribute("id", "hi" + i); 
-    img.style.zIndex = 0;
+    img.style.zIndex = pp;
     img.src = "house" + i + ".png";
     document.getElementById("imgDiv").appendChild(img);
-    document.getElementById("hi1").style.zIndex = 1;
+    pp--;
   }
+  
+  document.getElementById("hi1").style.zIndex = 21;
+
   
   document.getElementById("left").addEventListener("click",         
     function() {
@@ -20,12 +23,18 @@ window.addEventListener("load", function(event) {
       } else {
         if (m > 1) {
           var img2 = document.getElementById("hi" + (m - 1));
-          img2.style.zIndex = 0;
         }
         var img = document.getElementById("hi" + m);
-        img.style.zIndex = 1;
-        console.log("m: " + m);
-        console.log("m zIndex: " + img.style.zIndex);
+        var styleInfo = getComputedStyle(img);
+        var left = styleInfo.getPropertyValue("left");
+        left = parseInt(left);
+        setTimeout(iLikeToMoveIt, 4000);
+        function iLikeToMoveIt() {
+          img.style.left = parseInt(img.style.left) + 10 + "px";
+          img.style.left = (++left) + "px";
+          console.log(img.style.left);
+          setTimeout(iLikeToMoveIt, 10);
+        }
         m++;
       }
   });
@@ -49,4 +58,6 @@ window.addEventListener("load", function(event) {
       }
   });
   
+
 });
+
