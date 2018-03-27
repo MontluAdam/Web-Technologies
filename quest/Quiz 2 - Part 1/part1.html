@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Quiz Part 1 </title>
+  </head>
+  <body>
+    <div id="someDiv">
+      <h1> Hover your mouse under this header</h1>
+    </div>
+  </body>
+  <style>
+    p {
+      padding: 5px;
+      border: 1px solid black;
+      display: inline;
+    }
+  </style>
+  <script>
+    window.addEventListener("load", function(event) {
+      var div = document.getElementById("someDiv");
+      for (var i = 0; i < 6; i++) {
+        var p = document.createElement("P");
+        var t = document.createTextNode("" + i);
+        p.appendChild(t);
+        div.appendChild(p);
+      }
+      
+      var para = document.getElementsByTagName("p");
+      for (var i = 0; i < 6; i++) {
+        para[i].addEventListener("mouseover", function() {
+          alert("You just hovered " + this.textContent);
+        });
+      }
+      
+      for (var i = 0; i < 6; i++) {
+        para[i].addEventListener("mouseout", function() {
+        })
+      }
+    });
+  </script>
+</html>

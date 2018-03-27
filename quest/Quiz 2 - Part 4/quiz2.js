@@ -8,6 +8,9 @@ window.addEventListener("load", function(event) {
     img.setAttribute("id", "hi" + i); 
     img.style.zIndex = pp;
     img.src = "house" + i + ".png";
+    //img.style.position = "absolute";
+    //img.style.left = "0px";
+    //img.style.top = "0px";
     document.getElementById("imgDiv").appendChild(img);
     pp--;
   }
@@ -17,47 +20,60 @@ window.addEventListener("load", function(event) {
   
   document.getElementById("left").addEventListener("click",         
     function() {
-      if (m > 9) {
+      if (m+1 == 10) {
         alert("There are no images left.");
         m = 9;
       } else {
-        if (m > 1) {
-          var img2 = document.getElementById("hi" + (m - 1));
-        }
-        var img = document.getElementById("hi" + m);
-        var styleInfo = getComputedStyle(img);
-        var left = styleInfo.getPropertyValue("left");
-        left = parseInt(left);
-        setTimeout(iLikeToMoveIt, 4000);
+        setTimeout(iLikeToMoveIt, 100);
         function iLikeToMoveIt() {
-          img.style.left = parseInt(img.style.left) + 10 + "px";
-          img.style.left = (++left) + "px";
-          console.log(img.style.left);
-          setTimeout(iLikeToMoveIt, 10);
+          var img = document.getElementById("hi" + m);
+          var styleInfo = getComputedStyle(img);
+          var left = styleInfo.getPropertyValue("left");
+          left = parseInt(left);
+          if (left == 350) {
+            var img = document.getElementById("hi" + m);
+            var styleInfo = getComputedStyle(img);
+            var left = styleInfo.getPropertyValue("left");
+            left = parseInt(left);
+            m++;
+            console.log(m);
+          } else {
+            var img = document.getElementById("hi" + m);
+            var styleInfo = getComputedStyle(img);
+            var left = styleInfo.getPropertyValue("left");
+            left = parseInt(left);
+            img.style.left = (++left) + "px";
+            setTimeout(iLikeToMoveIt, 1);
+          }
         }
-        m++;
       }
   });
   
   document.getElementById("right").addEventListener("click", 
     function() {
-      if (m < 1) {
+      if ((m-1) < 1) {
+        console.log(m);
         alert("There are no images left.");
         m = 1;
       } else {
-        if (m < 9) {
-          var img2 = document.getElementById("hi" + (m + 1));
-          img2.style.zIndex = 0;
-        }
-        console.log(m);
-        var img = document.getElementById("hi" + m);
-        img.style.zIndex = 1;
         console.log("m: " + m);
-        console.log("m- zIndex: " + img.style.zIndex);
-        m--;
+        setTimeout(moveIt, 100);
+        function moveIt() {
+          var img = document.getElementById("hi" + (m-1));
+          var styleInfo = getComputedStyle(img);
+          var left = styleInfo.getPropertyValue("left");
+          left = parseInt(left);
+          if (left == 0) {
+            m--;
+          } else {
+            var styleInfo = getComputedStyle(img);
+            var left = styleInfo.getPropertyValue("left");
+            left = parseInt(left);
+            img.style.left = (--left) + "px";
+            setTimeout(moveIt, 1);
+          }
+        }
       }
   });
-  
-
 });
 

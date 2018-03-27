@@ -1,3 +1,13 @@
+#imgDiv {
+  display: relative;
+  overflow: hidden;
+  position: absolute;
+  top: 50px;
+  left: 510px;
+  padding-left: 352px;
+  padding-top: 352px;
+}
+
 h3 {
   text-align: center;
 }
@@ -7,28 +17,28 @@ img {
   margin-left: auto;
   margin-right: auto;
   border: 1px solid black;
-  width: 150px;
-  height: 150px;
-  top: 10%;
-  left: 45%;
+  top: 0px;
+  left: 0px;
+  width: 350px;
+  height: 350px;
   position: absolute;
 }
 span {
   position: absolute;
-  top: 5%;
-  left: 45%;
+  top: 7.6%;
+  left: 37.4%;
 }
 #left {
   margin-left: 5.5%;
-  padding-left: 80px;
-  padding-top: 250px;
+  padding-left: 280px;
+  padding-top: 25.6%;
   z-index: 500;
-  /*background: red;*/
+  /*background: red;*/  
 }
 
 #right {
-  padding-right: 80px;
-  padding-top: 250px;
+  padding-right: 180px;
+  padding-top: 350px;
   z-index: 500;
   /*background: green;*/
 }
